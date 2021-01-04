@@ -51,19 +51,4 @@ public class Request {
 	private List<RequestStages>states = new ArrayList<>();
 	
 	
-	public Request(Long id, String subject, String description,
-				Date creationDate, RequestStates requestStates,
-				Users users) {
-		super();
-		this.id = id;
-		this.subject = subject;
-		this.description = description;
-		this.creationDate = creationDate;
-		this.requestStates = requestStates;
-		this.users = users;
-	}
-	
-	
-	
-	
 }

@@ -12,12 +12,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-import com.softwalter.project.douman.enums.RequestStates;
+
 import com.softwalter.project.douman.enums.Role;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -42,6 +43,6 @@ public class Users {
 	private List<Request>requests = new ArrayList<>();
 	
 	@OneToMany(mappedBy = "users")
-	private List<RequestStates>states = new ArrayList<>();
+	private List<RequestStages>states = new ArrayList<>();
 	
 }

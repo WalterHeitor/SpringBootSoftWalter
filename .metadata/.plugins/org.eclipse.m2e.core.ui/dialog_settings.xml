@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="D:\projetos\SpringBootSoftWalter"/>
+			<item value="D:\projetos"/>
 			<item value="C:\Users\walhe\OneDrive\Documentos\Projetos\StsSpring"/>
 			<item value="C:\Users\walhe\OneDrive\Documentos\Projetos\StsSpring\SpringBootSoftWalter"/>
 		</list>
