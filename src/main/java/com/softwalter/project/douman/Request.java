@@ -1,5 +1,6 @@
 package com.softwalter.project.douman;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -27,7 +28,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Request {
+public class Request implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,24 +51,13 @@ public class Request {
 	private RequestStates requestStates;
 	
 	@ManyToOne
-	@JoinColumn(name = "user_id")
-	private Users users;
+	@JoinColumn(name = "owenr_id")
+	private Users owenr;
 	
 	@OneToMany(mappedBy = "request")
 	private List<RequestStages>states = new ArrayList<>();
 	
 	
-	public Request(Long id, String subject, String description,
-				Date creationDate, RequestStates requestStates,
-				Users users) {
-		super();
-		this.id = id;
-		this.subject = subject;
-		this.description = description;
-		this.creationDate = creationDate;
-		this.requestStates = requestStates;
-		this.users = users;
-	}
 	
 	
 	
