@@ -51,8 +51,8 @@ public class Request implements Serializable{
 	private RequestStates requestStates;
 	
 	@ManyToOne
-	@JoinColumn(name = "owenr_id")
-	private Users owenr;
+	@JoinColumn(name = "owner_id")
+	private Users owner;
 	
 	@OneToMany(mappedBy = "request")
 	private List<RequestStages>states = new ArrayList<>();

@@ -43,10 +43,10 @@ public class Users implements Serializable{
 	@Enumerated(EnumType.STRING)
 	private Role role;
 	
-	@OneToMany(mappedBy = "owenr")
+	@OneToMany(mappedBy = "owner")
 	private List<Request>requests = new ArrayList<>();
 	
-	@OneToMany(mappedBy = "owenr")
+	@OneToMany(mappedBy = "owner")
 	private List<RequestStages>states = new ArrayList<>();
 	
 }

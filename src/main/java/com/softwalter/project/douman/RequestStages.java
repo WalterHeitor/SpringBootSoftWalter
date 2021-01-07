@@ -51,7 +51,7 @@ public class RequestStages implements Serializable{
 	@JoinColumn(name = "request_id")
 	private Request request;
 	@ManyToOne
-	@JoinColumn(name = "owenr_id")
-	private Users owenr;
+	@JoinColumn(name = "owner_id")
+	private Users owner;
 	
 }
