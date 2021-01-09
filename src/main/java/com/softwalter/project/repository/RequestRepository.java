@@ -10,7 +10,7 @@ import com.softwalter.project.douman.RequestStages;
 
 public interface RequestRepository extends JpaRepository<Request, Long>{
 
-	public List<Request>findAllOwnerById(Long id);
+	public List<Request>findAllByOwnerId(Long id);
 	
 	@Query("UPDATE Request set states = ?2 WHERE id = ?1")
 	public Request updateStatus(Long id, RequestStages stages);
